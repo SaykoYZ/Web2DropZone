@@ -1,0 +1,2 @@
+import {getSettings} from "@/lib/repositories/settings";import {SettingsManager} from "@/components/admin/AdminClient";
+export default async function Settings(){const s=await getSettings();return <main className="dz-grid min-h-screen p-6 md:p-10"><div className="mb-8"><div className="text-[10px] tracking-[.5em] text-white/30">CONFIG / SITE</div><h1 className="mt-3 text-4xl font-black md:text-5xl">Paramètres</h1><p className="mt-2 text-sm text-white/35">Modifie le contenu et le comportement du site sans toucher au code.</p></div><SettingsManager initial={s}/></main>}

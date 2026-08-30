@@ -1,0 +1,1 @@
+import {NextResponse} from "next/server";import {getCurrentUser} from "@/lib/server/session";import {writeJson} from "@/lib/repositories/json";export async function DELETE(){const u=await getCurrentUser();if(!u||u.role!=="SUPER_ADMIN")return NextResponse.json({error:"Forbidden"},{status:403});await writeJson("logs.json",[]);return NextResponse.json({ok:true})}

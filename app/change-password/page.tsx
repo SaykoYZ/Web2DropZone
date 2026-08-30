@@ -1,0 +1,2 @@
+import {redirect} from "next/navigation";import {getCurrentUser} from "@/lib/server/session";import {ChangePasswordForm} from "@/components/ChangePasswordForm";
+export default async function ChangePasswordPage(){const user=await getCurrentUser();if(!user)redirect("/login");if(!user.mustChangePassword)redirect(user.role==="ADMIN"||user.role==="SUPER_ADMIN"?"/admin":"/dashboard");return <main className="flex min-h-screen items-center justify-center bg-[#030303] p-6"><ChangePasswordForm email={user.email}/></main>}

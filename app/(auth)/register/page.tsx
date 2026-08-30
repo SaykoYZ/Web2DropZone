@@ -1,0 +1,2 @@
+import { RegisterForm } from "@/components/RegisterForm";
+export default function RegisterPage(){return <main className="flex min-h-screen items-center justify-center bg-[radial-gradient(circle_at_center,rgba(255,255,255,.08),transparent_45%),#050505] p-6"><RegisterForm/></main>}

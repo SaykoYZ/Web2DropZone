@@ -1,0 +1,30 @@
+{
+  "siteName": "DROPZONE GENERATOR",
+  "siteDescription": "Générez. Automatisez. Dominez.",
+  "slogan": "GÉNÉREZ. AUTOMATISEZ. DOMINEZ.",
+  "heroTitle": "DROPZONE GENERATOR",
+  "heroSubtitle": "Une plateforme sombre, rapide et pensée pour votre communauté.",
+  "heroImage": "",
+  "logoImage": "/logo.png",
+  "primaryColor": "#ffffff",
+  "secondaryColor": "#888888",
+  "discordUrl": "",
+  "footerText": "DROPZONE — Générateur premium.",
+  "maintenance": false,
+  "contactEmail": "",
+  "snowEnabled": true,
+  "musicEnabled": true,
+  "musicVolume": 0.45,
+  "faq": [
+    {
+      "question": "Comment fonctionne DropZone ?",
+      "answer": "Choisissez un produit ou une offre puis passez votre commande."
+    }
+  ],
+  "paymentEnabled": true,
+  "paymentName": "PayPal — Amis et proches",
+  "paypalEmail": "tonymontana33250@gmail.com",
+  "paymentInstructions": "Après ton paiement, conserve la preuve de paiement et contacte le support avec ton numéro de commande.",
+  "musicUrl": "https://www.youtube.com/watch?v=MuVh4zR-5DM",
+  "musicStartSeconds": 23
+}

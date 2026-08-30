@@ -1,0 +1,13 @@
+[
+  {
+    "id": "1c934a4f-422a-496b-86f9-22783e78ac54",
+    "email": "dropzone@dc.ru",
+    "passwordHash": "$2b$12$PI4fxHQED95dtidCD0l7Nurhv1bUOZdWLzICpF1rWbNNM44kQlUPK",
+    "displayName": "DropZone Admin",
+    "role": "SUPER_ADMIN",
+    "active": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-08-30T05:05:25.540Z",
+    "lastLoginAt": "2026-08-30T05:06:53.190Z"
+  }
+]

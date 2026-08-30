@@ -1,0 +1,3 @@
+import "./globals.css";import {ensureInitialAdmin} from "@/lib/server/bootstrap";import {VisualFX} from "@/components/VisualFX";import {getSettings} from "@/lib/repositories/settings";
+export const metadata={title:"DropZone Generator",description:"Générez. Automatisez. Dominez.",icons:{icon:"/logo.png"}};
+export default async function RootLayout({children}:{children:React.ReactNode}){await ensureInitialAdmin();const settings=await getSettings();return <html lang="fr"><body><VisualFX snow={settings.snowEnabled} music={settings.musicEnabled} musicVolume={settings.musicVolume} musicUrl={settings.musicUrl} musicStartSeconds={settings.musicStartSeconds}/>{children}</body></html>}

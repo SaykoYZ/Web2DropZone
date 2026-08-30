@@ -1,0 +1,2 @@
+import { redirect } from "next/navigation"; import { getCurrentUser } from "@/lib/server/session"; import { ClientSidebar } from "@/components/layout/ClientSidebar";
+export default async function Orders(){const u=await getCurrentUser();if(!u)redirect("/login");return <div className="flex min-h-screen"><ClientSidebar/><main className="flex-1 p-8"><h1 className="text-4xl font-black">Mes commandes</h1><div className="metal mt-8 rounded-3xl p-8 text-white/40">Aucune commande pour le moment.</div></main></div>}

@@ -1,0 +1,2 @@
+import {getLogs} from "@/lib/repositories/logs";import {LogsClient} from "@/components/admin/LogsClient";
+export default async function Logs(){return <main className="dz-grid min-h-screen p-6 md:p-10"><div className="mb-8"><div className="text-[10px] tracking-[.5em] text-white/30">SYSTEM / AUDIT</div><h1 className="mt-3 text-4xl font-black md:text-5xl">Logs</h1></div><LogsClient initial={await getLogs()}/></main>}

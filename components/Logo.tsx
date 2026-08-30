@@ -1,0 +1,3 @@
+import Image from "next/image";
+import Link from "next/link";
+export function Logo({admin=false,src="/logo.png"}:{admin?:boolean;src?:string}){return <Link href={admin?"/admin":"/"} className="flex items-center gap-3 group"><span className="relative h-11 w-11 overflow-hidden rounded-xl border border-white/15 bg-black shadow-[0_0_35px_rgba(255,255,255,.08)]"><Image src={src||"/logo.png"} alt="DropZone" fill priority sizes="44px" unoptimized={src?.startsWith("/uploads/")} className="object-cover transition duration-500 group-hover:scale-110"/></span><span className="leading-none"><b className="block text-sm font-black tracking-[.24em]">DROPZONE</b>{admin&&<small className="mt-1 block text-[8px] tracking-[.35em] text-white/35">CONTROL CENTER</small>}</span></Link>}

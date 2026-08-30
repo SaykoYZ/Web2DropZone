@@ -1,0 +1,1 @@
+import { redirect } from "next/navigation"; import { getCurrentUser } from "@/lib/server/session"; export default async function Support(){if(!(await getCurrentUser()))redirect("/login");return <main className="min-h-screen p-8"><h1 className="text-4xl font-black">Support</h1><p className="mt-4 text-white/45">Centre de support DropZone.</p></main>}

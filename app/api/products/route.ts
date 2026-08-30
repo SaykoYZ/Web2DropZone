@@ -1,0 +1,1 @@
+import { NextResponse } from "next/server"; import { JsonProductRepository } from "@/lib/repositories/products"; export async function GET(){return NextResponse.json(await new JsonProductRepository().getAll())}

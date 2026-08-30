@@ -1,0 +1,16 @@
+[
+  {
+    "id": "0dbc2cbe-4fcf-4878-903a-ef8e1bb10960",
+    "type": "PASSWORD_CHANGED",
+    "userId": "1c934a4f-422a-496b-86f9-22783e78ac54",
+    "description": "Mot de passe initial remplacé.",
+    "createdAt": "2026-08-30T05:07:02.305Z"
+  },
+  {
+    "id": "ef902c38-edef-4d81-b8e5-c3fbd4b3b39b",
+    "type": "LOGIN",
+    "userId": "1c934a4f-422a-496b-86f9-22783e78ac54",
+    "description": "Connexion réussie",
+    "createdAt": "2026-08-30T05:06:53.195Z"
+  }
+]
