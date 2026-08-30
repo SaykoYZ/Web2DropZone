@@ -1,6 +1,3 @@
-import { SiteSettings } from "@/types";
-import { readJson, writeJson } from "./json";
-
 const defaults: SiteSettings = {
   siteName: "DROPZONE GENERATOR",
   siteDescription: "Générez. Automatisez. Dominez.",
@@ -8,17 +5,30 @@ const defaults: SiteSettings = {
   heroTitle: "DROPZONE GENERATOR",
   heroSubtitle:
     "Une plateforme sombre, rapide et pensée pour votre communauté.",
+
   heroImage: "",
   logoImage: "/logo.png",
+
   primaryColor: "#ffffff",
   secondaryColor: "#888888",
+
   discordUrl: "",
   footerText: "DROPZONE — Générateur premium.",
-  maintenance: false,
   contactEmail: "",
+
+  maintenance: false,
+
   snowEnabled: true,
   musicEnabled: true,
   musicVolume: 0.45,
+
+  // 💳 Paiement
+  paymentEnabled: true,
+  paymentName: "PayPal — Amis et proches",
+  paypalEmail: "tonymontana33250@gmail.com",
+  paymentInstructions:
+    "Envoyez le paiement via PayPal en sélectionnant « Amis et proches », puis indiquez votre numéro de commande.",
+
   faq: [
     {
       question: "Comment fonctionne DropZone ?",
@@ -26,36 +36,9 @@ const defaults: SiteSettings = {
         "Choisissez un produit ou une offre puis passez votre commande.",
     },
     {
-      question: "Le paiement est-il disponible ?",
+      question: "Comment payer ?",
       answer:
-        "L'architecture est prête pour une future intégration PayPal ou Stripe.",
+        "Le paiement peut être effectué via PayPal selon les options disponibles dans votre compte.",
     },
   ],
 };
-
-export async function getSettings(): Promise<SiteSettings> {
-  const current = await readJson<Partial<SiteSettings>>(
-    "settings.json",
-    {}
-  );
-
-  return {
-    ...defaults,
-    ...current,
-  };
-}
-
-export async function updateSettings(
-  data: Partial<SiteSettings>
-): Promise<SiteSettings> {
-  const current = await getSettings();
-
-  const next: SiteSettings = {
-    ...current,
-    ...data,
-  };
-
-  await writeJson("settings.json", next);
-
-  return next;
-}
